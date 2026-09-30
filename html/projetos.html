@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ONG DSF - Projetos</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-conteudo">
+
+      <h1>Projetos e formas de participar</h1>
+
+      <!-- Controle do menu mobile -->
+      <input type="checkbox" id="menu-controle" class="menu-controle">
+
+      <!-- Botão hambúrguer -->
+      <label for="menu-controle" class="menu-hamburguer" aria-label="Abrir menu de navegação">
+        ☰
+      </label>
+
+      <!-- Navegação -->
+      <nav class="menu" aria-label="Navegação principal">
+
+        <ul class="menu-lista">
+
+          <li>
+            <a href="index.html">Início</a>
+          </li>
+
+          <li class="tem-submenu">
+
+            <a href="projetos.html">
+              Projetos ▾
+            </a>
+
+            <ul class="submenu">
+
+              <li>
+                <a href="#doacao">
+                  Doações
+                </a>
+              </li>
+
+              <li>
+                <a href="#voluntariado">
+                  Voluntariado
+                </a>
+              </li>
+
+            </ul>
+
+          </li>
+
+          <li>
+            <a href="cadastro.html">
+              Cadastro
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <div class="grid">
+
+      <!-- ==========================================
+           APRESENTAÇÃO DOS PROJETOS
+           ========================================== -->
+
+      <section class="col-12">
+
+        <!-- Badge -->
+        <span class="badge">
+          Arrecadação ativa
+        </span>
+
+        <h2>Nossos projetos</h2>
+
+        <p>
+          Realizamos campanhas de arrecadação,
+          atividades educativas e ações de apoio
+          à comunidade.
+        </p>
+
+      </section>
+
+
+      <!-- ==========================================
+           DOAÇÕES
+           ========================================== -->
+
+      <section id="doacao" class="col-6">
+
+        <h2>Como fazer uma doação</h2>
+
+        <p>
+          As doações ajudam a manter os projetos
+          e podem ser feitas entrando em contato
+          com a nossa equipe.
+        </p>
+
+        <!-- Alerta -->
+        <div class="alerta" role="alert">
+
+          <strong>
+            Doações abertas
+          </strong>
+
+          Estamos recebendo alimentos, materiais
+          e contribuições para os projetos da ONG.
+
+        </div>
+
+        <div class="acoes">
+
+          <a class="botao-link" href="mailto:contato@ongdsf.org.br">
+            Quero fazer uma doação
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==========================================
+           VOLUNTARIADO
+           ========================================== -->
+
+      <section id="voluntariado" class="col-6">
+
+        <h2>Trabalho voluntário</h2>
+
+        <p>
+          Quem deseja participar como voluntário
+          pode preencher o cadastro para informar
+          seus dados de contato.
+        </p>
+
+        <!-- Toast -->
+        <div class="toast" role="status" aria-live="polite">
+
+          <span class="toast-icone" aria-hidden="true">
+            ✓
+          </span>
+
+          <span>
+            Cadastro de voluntários disponível!
+          </span>
+
+        </div>
+
+        <div class="acoes">
+
+          <a class="botao-link" href="cadastro.html">
+            Quero ser voluntário
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==========================================
+           FORMAS DE CONTRIBUIÇÃO
+           ========================================== -->
+
+      <section class="col-12 destaque">
+
+        <h2>Formas de contribuição</h2>
+
+        <ul>
+          <li>
+            Doação de alimentos e materiais.
+          </li>
+
+          <li>
+            Contribuição financeira.
+          </li>
+
+          <li>
+            Participação como voluntário.
+          </li>
+        </ul>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      &copy; 2026 ONG DSF.
+      Todos os direitos reservados.
+    </p>
+
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js">
+  </script>
+
+  <script type="module" src="../js/main.js">
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,876 @@
+:root {
+  /* ==================================================
+     DESIGN SYSTEM - PALETA
+     ================================================== */
+
+  --cor-primaria: #165a72;
+  --cor-primaria-escura: #0f3f50;
+  --cor-primaria-clara: #d9edf3;
+
+  --cor-secundaria: #2f7d5b;
+  --cor-secundaria-clara: #dff1e7;
+
+  --cor-fundo: #f6f8f9;
+  --cor-superficie: #ffffff;
+  --cor-texto: #1f2933;
+  --cor-texto-suave: #52606d;
+  --cor-borda: #cbd5dc;
+
+  /* Tipografia - 5 níveis */
+
+  --fonte-xs: 0.875rem;
+  --fonte-sm: 1rem;
+  --fonte-md: 1.25rem;
+  --fonte-lg: 1.5rem;
+  --fonte-xl: 2rem;
+
+  /* Escala modular de espaçamento */
+
+  --espaco-1: 0.25rem;
+  --espaco-2: 0.5rem;
+  --espaco-3: 1rem;
+  --espaco-4: 1.5rem;
+  --espaco-5: 2rem;
+  --espaco-6: 3rem;
+
+  --raio: 0.75rem;
+  --largura-conteudo: 70rem;
+}
+
+
+/* ==================================================
+   CONFIGURAÇÕES GERAIS
+   ================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--fonte-sm);
+  line-height: 1.6;
+
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+}
+
+header,
+main,
+footer {
+  width: min(calc(100% - 2rem),
+      var(--largura-conteudo));
+
+  margin-inline: auto;
+}
+
+header {
+  padding: var(--espaco-5) 0 var(--espaco-3);
+}
+
+main {
+  padding-bottom: var(--espaco-5);
+}
+
+footer {
+  padding: var(--espaco-4) 0;
+
+  color: var(--cor-texto-suave);
+  font-size: var(--fonte-xs);
+}
+
+
+/* ==================================================
+   TIPOGRAFIA
+   ================================================== */
+
+h1 {
+  margin: 0 0 var(--espaco-3);
+
+  font-size: var(--fonte-xl);
+  color: var(--cor-primaria-escura);
+}
+
+h2 {
+  font-size: var(--fonte-lg);
+  color: var(--cor-primaria);
+}
+
+h3 {
+  font-size: var(--fonte-md);
+}
+
+p,
+li,
+label,
+input,
+select,
+button {
+  font-size: var(--fonte-sm);
+}
+
+small {
+  font-size: var(--fonte-xs);
+}
+
+
+/* ==================================================
+   LINKS
+   ================================================== */
+
+a {
+  color: var(--cor-primaria);
+  font-weight: 700;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--cor-primaria-escura);
+}
+
+
+/* ==================================================
+   SEÇÕES E CARDS
+   ================================================== */
+
+section,
+form {
+  margin-top: var(--espaco-4);
+  padding: var(--espaco-4);
+
+  background: var(--cor-superficie);
+
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+}
+
+.destaque {
+  background: var(--cor-secundaria-clara);
+  border-left: 4px solid var(--cor-secundaria);
+}
+
+
+/* ==================================================
+   IMAGENS
+   ================================================== */
+
+picture img {
+  display: block;
+
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+
+  margin: var(--espaco-3) 0;
+
+  border-radius: var(--raio);
+}
+
+
+/* ==================================================
+   FORMULÁRIO
+   ================================================== */
+
+fieldset {
+  margin: 0 0 var(--espaco-4);
+  padding: var(--espaco-3);
+
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+}
+
+legend {
+  padding: 0 var(--espaco-2);
+
+  font-weight: 700;
+  color: var(--cor-primaria-escura);
+}
+
+label {
+  font-weight: 700;
+}
+
+input,
+select {
+  width: 100%;
+  max-width: 34rem;
+
+  margin-top: var(--espaco-1);
+  padding: 0.75rem;
+
+  border: 1px solid var(--cor-borda);
+  border-radius: 0.5rem;
+
+  background: var(--cor-superficie);
+  color: var(--cor-texto);
+}
+
+input:focus,
+select:focus {
+  outline: 3px solid var(--cor-primaria-clara);
+  border-color: var(--cor-primaria);
+}
+
+
+/* ==================================================
+   BOTÕES
+   ================================================== */
+
+button {
+  padding: 0.75rem var(--espaco-4);
+
+  border: 0;
+  border-radius: 0.5rem;
+
+  background: var(--cor-secundaria);
+  color: #ffffff;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* ==================================================
+   GRID SYSTEM - 12 COLUNAS
+   ================================================== */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(12, 1fr);
+
+  gap: var(--espaco-3);
+
+  width: 100%;
+}
+
+
+/*
+  Mobile First:
+  inicialmente todas as colunas ocupam
+  toda a largura disponível.
+*/
+
+.col-12,
+.col-8,
+.col-6,
+.col-4,
+.col-3,
+.col-md-6,
+.col-lg-8,
+.col-lg-6,
+.col-lg-4 {
+  grid-column: span 12;
+}
+
+
+/* ==================================================
+   FLEXBOX
+   ================================================== */
+
+/* Ações dentro dos cards */
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: var(--espaco-2);
+
+  margin-top: var(--espaco-3);
+}
+
+
+/* Link com aparência de botão */
+
+.botao-link {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.75rem var(--espaco-3);
+
+  border-radius: 0.5rem;
+
+  background: var(--cor-secundaria);
+  color: #ffffff;
+
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+/* ==================================================
+   MENU RESPONSIVO
+   ================================================== */
+
+.header-conteudo {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--espaco-3);
+}
+
+.header-conteudo h1 {
+  margin-bottom: 0;
+}
+
+
+/* Checkbox que controla o menu mobile */
+
+.menu-controle {
+  position: absolute;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+
+/* Botão hambúrguer */
+
+.menu-hamburguer {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  border: 1px solid var(--cor-borda);
+  border-radius: 0.5rem;
+
+  background: var(--cor-superficie);
+  color: var(--cor-primaria-escura);
+
+  font-size: var(--fonte-lg);
+
+  cursor: pointer;
+}
+
+
+/* Menu fechado no celular */
+
+.menu {
+  display: none;
+
+  width: 100%;
+}
+
+
+/* Abre o menu */
+
+.menu-controle:checked~.menu {
+  display: block;
+}
+
+
+/* Lista principal */
+
+.menu-lista {
+  display: flex;
+
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  gap: var(--espaco-2);
+}
+
+
+/* Links do menu */
+
+.menu-lista a {
+  display: block;
+
+  padding: var(--espaco-2) var(--espaco-3);
+
+  color: var(--cor-primaria);
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  border-radius: 0.5rem;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* Hover e foco */
+
+.menu-lista a:hover,
+.menu-lista a:focus-visible {
+  background: var(--cor-primaria-clara);
+
+  color: var(--cor-primaria-escura);
+}
+
+
+/* Item que possui submenu */
+
+.tem-submenu {
+  position: relative;
+}
+
+
+/* Submenu */
+
+.submenu {
+  display: none;
+
+  margin: 0;
+  padding: var(--espaco-2);
+
+  list-style: none;
+
+  background: var(--cor-superficie);
+
+  border: 1px solid var(--cor-borda);
+  border-radius: 0.5rem;
+}
+
+
+/* Abre submenu com mouse */
+
+.tem-submenu:hover .submenu {
+  display: block;
+}
+
+
+/* Abre submenu pelo teclado */
+
+.tem-submenu:focus-within .submenu {
+  display: block;
+}
+
+
+/* ==================================================
+   ESTADOS INTERATIVOS
+   ================================================== */
+
+button,
+.botao-link {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+
+/* Hover */
+
+button:hover,
+.botao-link:hover {
+  background: #256448;
+
+  color: #ffffff;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Foco pelo teclado */
+
+button:focus-visible,
+.botao-link:focus-visible {
+  outline: 3px solid var(--cor-primaria-clara);
+
+  outline-offset: 3px;
+}
+
+
+/* Clique */
+
+button:active,
+.botao-link:active {
+  transform: scale(0.97);
+
+  box-shadow: none;
+}
+
+
+/* Botão desabilitado */
+
+button:disabled {
+  background: var(--cor-borda);
+
+  color: var(--cor-texto-suave);
+
+  cursor: not-allowed;
+
+  opacity: 0.6;
+
+  box-shadow: none;
+}
+
+
+/* ==================================================
+   VALIDAÇÃO VISUAL DO FORMULÁRIO
+   ================================================== */
+
+/* Campo válido */
+
+input:valid:not(:placeholder-shown) {
+  border-color: var(--cor-secundaria);
+}
+
+
+/* Campo inválido */
+
+input:invalid:not(:placeholder-shown) {
+  border-color: #b42318;
+
+  background: #fff5f5;
+}
+
+
+/* Campo inválido em foco */
+
+input:invalid:focus {
+  outline: 3px solid #ffd5d2;
+
+  border-color: #b42318;
+}
+
+
+/* Campo válido em foco */
+
+input:valid:focus {
+  outline: 3px solid var(--cor-secundaria-clara);
+
+  border-color: var(--cor-secundaria);
+}
+
+
+/* ==================================================
+   COMPONENTES DE FEEDBACK
+   ================================================== */
+
+
+/* ==================================================
+   BADGE
+   ================================================== */
+
+.badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding:
+    var(--espaco-1) var(--espaco-2);
+
+  border-radius: 999px;
+
+  background: var(--cor-secundaria-clara);
+
+  color: var(--cor-secundaria);
+
+  font-size: var(--fonte-xs);
+
+  font-weight: 700;
+}
+
+
+/* ==================================================
+   ALERTA
+   ================================================== */
+
+.alerta {
+  margin-top: var(--espaco-3);
+
+  padding: var(--espaco-3);
+
+  background: var(--cor-primaria-clara);
+
+  color: var(--cor-primaria-escura);
+
+  border: 1px solid var(--cor-primaria);
+
+  border-left: 4px solid var(--cor-primaria);
+
+  border-radius: var(--raio);
+}
+
+.alerta strong {
+  display: block;
+
+  margin-bottom: var(--espaco-1);
+}
+
+
+/* ==================================================
+   TOAST
+   ================================================== */
+
+.toast {
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--espaco-2);
+
+  margin-top: var(--espaco-3);
+
+  padding: var(--espaco-3);
+
+  width: 100%;
+
+  max-width: 30rem;
+
+  background: var(--cor-secundaria);
+
+  color: #ffffff;
+
+  border-radius: var(--raio);
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.15);
+
+  font-size: var(--fonte-sm);
+}
+
+.toast-icone {
+  font-size: var(--fonte-md);
+
+  font-weight: 700;
+}
+
+/* ==================================================
+   COMPONENTES DINÂMICOS
+   ================================================== */
+
+.lista-projetos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaco-4);
+  margin-top: var(--espaco-4);
+}
+
+.card-projeto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-3);
+
+  padding: var(--espaco-4);
+
+  background-color: var(--cor-superficie);
+
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+}
+
+.card-projeto h3 {
+  margin: 0;
+  color: var(--cor-primaria);
+}
+
+.card-projeto p {
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* ==================================================
+   BREAKPOINT 1
+   CELULARES PEQUENOS - 480px
+   ================================================== */
+
+
+@media (min-width: 480px) {
+
+  .grid {
+    gap: var(--espaco-3);
+  }
+
+  header,
+  main,
+  footer {
+    width: min(calc(100% - 2rem),
+        var(--largura-conteudo));
+  }
+}
+
+
+/* ==================================================
+   BREAKPOINT 2
+   TABLETS - 768px
+   ================================================== */
+
+@media (min-width: 768px) {
+
+  /* Cabeçalho */
+
+  .header-conteudo {
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: center;
+  }
+
+
+  /* Esconde botão hambúrguer */
+
+  .menu-hamburguer {
+    display: none;
+  }
+
+
+  /* Menu sempre visível */
+
+  .menu {
+    display: block;
+
+    width: auto;
+  }
+
+
+  /* Menu horizontal */
+
+  .menu-lista {
+    flex-direction: row;
+
+    align-items: center;
+  }
+
+
+  /* Submenu flutuante */
+
+  .submenu {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    min-width: 190px;
+
+    z-index: 10;
+
+    box-shadow:
+      0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+
+
+  /* Grid */
+
+  .grid {
+    gap: var(--espaco-4);
+  }
+
+  .col-6 {
+    grid-column: span 6;
+  }
+
+  .col-4 {
+    grid-column: span 6;
+  }
+
+  .col-3 {
+    grid-column: span 6;
+  }
+
+  .col-md-6 {
+    grid-column: span 6;
+  }
+
+  .lista-projetos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ==================================================
+   BREAKPOINT 3
+   NOTEBOOKS - 1024px
+   ================================================== */
+
+@media (min-width: 1024px) {
+
+  .col-8 {
+    grid-column: span 8;
+  }
+
+  .col-6 {
+    grid-column: span 6;
+  }
+
+  .col-4 {
+    grid-column: span 4;
+  }
+
+  .col-3 {
+    grid-column: span 3;
+  }
+
+  .col-lg-8 {
+    grid-column: span 8;
+  }
+
+  .col-lg-6 {
+    grid-column: span 6;
+  }
+
+  .col-lg-4 {
+    grid-column: span 4;
+  }
+}
+
+
+/* ==================================================
+   BREAKPOINT 4
+   DESKTOPS - 1280px
+   ================================================== */
+
+@media (min-width: 1280px) {
+
+  :root {
+    --largura-conteudo: 75rem;
+  }
+
+  .grid {
+    gap: var(--espaco-5);
+  }
+}
+
+
+/* ==================================================
+   BREAKPOINT 5
+   TELAS GRANDES - 1440px
+   ================================================== */
+
+@media (min-width: 1440px) {
+
+  :root {
+    --largura-conteudo: 82.5rem;
+  }
+
+  .grid {
+    gap: var(--espaco-5);
+  }
+
+  .idade-calculada {
+    display: block;
+    margin-top: var(--espaco-2);
+
+    color: var(--cor-secundaria);
+
+    font-size: var(--fonte-xs);
+    font-weight: 700;
+  }
+
+  .idade-erro {
+    color: #b42318;
+  }
+}
