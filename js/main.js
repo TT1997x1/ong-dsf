@@ -1,6 +1,4 @@
-// ==================================================
-// ARQUIVO PRINCIPAL DA APLICAÇÃO
-// ==================================================
+// Arquivo principal responsável pela inicialização da aplicação
 
 import {
     iniciarSPA
@@ -15,9 +13,6 @@ import {
 } from "./formulario.js";
 
 
-// ==================================================
-// INICIALIZAÇÃO
-// ==================================================
 
 renderizarProjetos();
 
