@@ -4,10 +4,10 @@
   "description": "Projeto front-end desenvolvido para uma ONG, com o objetivo de apresentar informações institucionais, projetos sociais e permitir o cadastro de pessoas interessadas em participar das ações.",
   "main": "index.js",
   "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview"
-},
+    "dev": "vite",
+    "build": "node node_modules/vite/bin/vite.js build",
+    "preview": "vite preview"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TT1997x1/ong-dsf.git"
