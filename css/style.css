@@ -39,6 +39,64 @@
 
 
 /* ==================================================
+   MODO DE ALTO CONTRASTE
+   ================================================== */
+
+body.alto-contraste {
+  --cor-primaria: #ffff00;
+  --cor-primaria-escura: #000000;
+  --cor-primaria-clara: #000000;
+
+  --cor-secundaria: #ffff00;
+  --cor-secundaria-clara: #000000;
+
+  --cor-fundo: #000000;
+  --cor-superficie: #000000;
+  --cor-texto: #ffffff;
+  --cor-texto-suave: #ffffff;
+  --cor-borda: #ffffff;
+}
+
+body.alto-contraste input:not([type="checkbox"]):not([type="radio"]),
+body.alto-contraste select,
+body.alto-contraste textarea {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+body.alto-contraste a {
+  color: #ffff00;
+}
+
+
+
+body.alto-contraste button {
+  border: 2px solid #ffffff;
+}
+
+.botao-contraste {
+  padding: var(--espaco-2) var(--espaco-3);
+  border: 2px solid currentColor;
+  border-radius: var(--raio);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botao-contraste:hover {
+  background-color: var(--cor-primaria-clara);
+}
+
+.botao-contraste:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 3px;
+}
+
+
+/* ==================================================
    CONFIGURAÇÕES GERAIS
    ================================================== */
 
