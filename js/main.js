@@ -12,10 +12,11 @@ import {
     iniciarValidacaoFormulario
 } from "./formulario.js";
 
-
+import {
+    iniciarAcessibilidade
+} from "./acessibilidade.js";
 
 renderizarProjetos();
-
 iniciarValidacaoFormulario();
-
 iniciarSPA();
+iniciarAcessibilidade();
