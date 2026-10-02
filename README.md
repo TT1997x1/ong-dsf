@@ -48,6 +48,9 @@ projeto-ong-dsf/
 │   ├── componentes.js
 │   ├── formulario.js
 │   └── storage.js
+├── package.json
+├── package-lock.json
+├── vite.config.mjs
 └── README.md
 ```
 
@@ -55,13 +58,12 @@ projeto-ong-dsf/
 
 ### Pré-requisitos
 
-Para executar o projeto é necessário ter:
+Para executar o projeto localmente é necessário ter:
 
 - Um navegador web atualizado.
 - Visual Studio Code ou outro editor de código.
+- Node.js e npm para executar o build de produção.
 - Uma forma de servir os arquivos por HTTP, como a extensão Live Server do VS Code.
-
-Não é necessário instalar dependências com npm, pois o projeto utiliza JavaScript nativo e a biblioteca Day.js é carregada por CDN.
 
 ### Execução local
 
@@ -83,9 +85,34 @@ cd ong-dsf
 code .
 ```
 
-4. Abra o arquivo `html/index.html` utilizando o Live Server.
+4. Para executar a aplicação durante o desenvolvimento, abra o arquivo:
+
+```text
+html/index.html
+```
+
+utilizando o Live Server.
 
 5. A aplicação será aberta no navegador e poderá ser utilizada localmente.
+
+## Build de produção
+
+O projeto utiliza o Vite para gerar uma versão otimizada para produção.
+
+Para gerar o build:
+
+```bash
+npm install
+npm run build
+```
+
+Os arquivos gerados são disponibilizados na pasta:
+
+```text
+dist/
+```
+
+O build foi testado localmente e concluído com sucesso.
 
 ## Versionamento
 
@@ -112,6 +139,32 @@ A primeira versão estável foi publicada como:
 ```text
 v1.0.0
 ```
+
+## Deploy e produção
+
+A aplicação é publicada na Vercel e está conectada ao repositório do projeto no GitHub.
+
+O projeto utiliza Vite para gerar os arquivos de produção:
+
+```bash
+npm run build
+```
+
+O resultado do build é gerado na pasta `dist`.
+
+### Validação em produção
+
+Após o deploy, foram testadas diretamente as páginas:
+
+- `index.html`
+- `projetos.html`
+- `cadastro.html`
+
+Cada página foi acessada diretamente e recarregada pelo navegador. Os testes foram concluídos com sucesso, confirmando que as páginas publicadas continuam acessíveis após o recarregamento.
+
+### Site publicado
+
+https://ong-dsf.vercel.app/index.html
 
 ## Release atual
 
